@@ -14,6 +14,7 @@ def bookLength(i):
 
 
 def firstBookLengthN(n):
+    """returns the index of the first book of length n"""
     # determine how many books with len < lenBook exist
     nShorter = npa([cardPool**l for l in xrange(n)]).sum()
     return nShorter  # no need for +1 bc of the empty book
