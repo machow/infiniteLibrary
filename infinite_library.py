@@ -21,6 +21,7 @@ def firstBookLengthN(n):
 
 
 def generateBook(i):
+    """generate the i'th book in the infinite library!"""
     lenBook = bookLength(i)
     if lenBook == 0: return ''  # the zero'th book is the empty book :)
     # we're looking for the nThisLength'th book of this length.
@@ -31,6 +32,8 @@ def generateBook(i):
 
 
 def getIndex(book):
+    """get the index of the book (fine; string if you wanna be a bummer like that)
+    in the infinite library"""
     bookLen = len(book)
     letters = list(book)
     index = 0
