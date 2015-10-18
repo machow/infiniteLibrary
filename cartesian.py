@@ -19,7 +19,8 @@ def cartesianN(sets, n):  # note that n indexes at 0 ie the first elt is elt 0
     return cartesianN
 
 def cartesianN_repeatSameSet(s, nRep, n):
-    """get the nth element of the cartesian product of sets [s,s,...,s], where s is repeated nRep times"""
+    """get the nth element of the cartesian product of sets [s,s,...,s],
+    where s is repeated nRep times"""
     card = len(s)
     cartesianN = []
     denom = 1
@@ -29,3 +30,4 @@ def cartesianN_repeatSameSet(s, nRep, n):
         # get denom for next elt
         denom *= card
     return cartesianN
+
