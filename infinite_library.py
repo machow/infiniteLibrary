@@ -4,7 +4,7 @@ from numpy import array as npa
 from cartesian import cartesianN_repeatSameSet
 
 #  all candidate book characters
-pool = list(''.join([string.ascii_letters, string.punctuation, string.digits]))
+pool = list(string.printable)
 cardPool = len(pool)
 
 def bookLength(i):
@@ -29,3 +29,15 @@ def generateBook(i):
     book = ''.join(book)
     return book
 
+
+def getIndex(book):
+    bookLen = len(book)
+    letters = list(book)
+    index = 0
+    # how far we need to move before current letter changes
+    blockSize = cardPool**(bookLen-1)  
+    for l in letters:
+        il = pool.index(l) + 1 # which elt in our alphabet is this letter?
+        index += blockSize*il
+        blockSize /= cardPool
+    return index
