@@ -3,7 +3,7 @@ var {cartesianN, cartesianN_repeatSameSet} = require('./src/cartesian.js');
 //  all candidate book characters
 // TODO: only ascii atm.  need to move out to all unicode
 var pool = [];
-for (var i=0;i<128; i++){
+for (var i=32;i<127; i++){
     pool.push(String.fromCharCode(i));
 }
 var cardPool = pool.length;
@@ -51,7 +51,7 @@ function getIndex(book){
     // how far we need to move before current letter changes
     var blockSize = pow(cardPool, bookLen-1);
     for (var i=0; i<letters.length; i++){
-        var il = pool.indexOf(i) + 1; // which elt in our alphabet is this letter?
+        var il = pool.indexOf(letters[i]) + 1; // which elt in our alphabet is this letter?
         index += blockSize * il;
         blockSize /= cardPool;
     }
