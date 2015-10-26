@@ -26,7 +26,7 @@ function cartesianN_repeatSameSet(s, nRep, n){
     var card = s.length;
     var cartesianN = [];
     var denom = 1;
-    for (var iSet=nRep; iSet>-1; iSet--){
+    for (var iSet=nRep; iSet>0; iSet--){
         var elt = setElt(s, n, denom, card);
         cartesianN.unshift(elt);
         // get denom for next elt
