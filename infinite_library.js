@@ -1,19 +1,14 @@
-// TODO: learn how to import this
-// from cartesian import cartesianN_repeatSameSet
+var {cartesianN, cartesianN_repeatSameSet} = require('./src/cartesian.js');
 
 //  all candidate book characters
 // TODO: only ascii atm.  need to move out to all unicode
 var pool = [];
 for (var i=0;i<128; i++){
-    pool.concat(String.fromCharCode(i));
+    pool.push(String.fromCharCode(i));
 }
 var cardPool = pool.length;
 
-var floor, ceil, log, pow;
-floor = Math.floor;
-ceil = Math.ceil;
-log = Math.log;
-pow = Math.pow;
+var {floor, ceil, log, pow} = Math;
 
 function bookLength(i){
     // gives you the length of book n
@@ -61,4 +56,13 @@ function getIndex(book){
         blockSize /= cardPool;
     }
     return index;
+}
+
+module.exports = {
+    generateBook: generateBook,
+    firstBookLengthN: firstBookLengthN,
+    bookLength: bookLength,
+    getIndex: getIndex,
+    cartesianN: cartesianN,
+    cartesianN_repeatSameSet: cartesianN_repeatSameSet
 }

@@ -1,0 +1,25 @@
+{
+  "name": "infinite-library",
+  "version": "0.0.0",
+  "description": "",
+  "main": "infinite_library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify infinite_library.js --standalone infLib -t babelify --outfile bundle.js",
+    "watch": "watchify infinite_library.js -d --debug --standalone infLib -t babelify -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonberliner/infiniteLibrary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonberliner/infiniteLibrary/issues"
+  },
+  "homepage": "https://github.com/jonberliner/infiniteLibrary#readme",
+  "devDependencies": {
+    "babelify": "^6.4.0",
+    "watchify": "^3.5.0"
+  }
+}

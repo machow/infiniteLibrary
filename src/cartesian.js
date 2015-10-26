@@ -9,7 +9,7 @@ function cartesianN(sets, n){
     var cards = sets.map(function(s){return s.length;});
     var cartesianN = [];
     var denom = 1;
-    for(var iSet=nSets; iSet>-1; iSet--){
+    for(var iSet=nSets-1; iSet>-1; iSet--){
         var s = sets[iSet];
         var card = cards[iSet];
         var elt = setElt(s, n, denom, card);
@@ -33,4 +33,9 @@ function cartesianN_repeatSameSet(s, nRep, n){
         denom *= card;
     }
     return cartesianN;
+}
+
+module.exports = {
+    cartesianN: cartesianN,
+    cartesianN_repeatSameSet: cartesianN_repeatSameSet,
 }
