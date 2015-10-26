@@ -3,7 +3,7 @@ var {cartesianN, cartesianN_repeatSameSet} = require('./src/cartesian.js');
 //  all candidate book characters
 var pool = [];
 for (var i=0;i<128; i++){
-    pool.concat(String.fromCharCode(i));
+    pool.push(String.fromCharCode(i));
 }
 var cardPool = pool.length;
 
