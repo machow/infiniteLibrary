@@ -2,6 +2,7 @@
 // from cartesian import cartesianN_repeatSameSet
 
 //  all candidate book characters
+// TODO: only ascii atm.  need to move out to all unicode
 var pool = [];
 for (var i=0;i<128; i++){
     pool.concat(String.fromCharCode(i));
@@ -13,6 +14,7 @@ floor = Math.floor;
 ceil = Math.ceil;
 log = Math.log;
 pow = Math.pow;
+
 function bookLength(i){
     // gives you the length of book n
     if( [0,1].indexOf(i) > -1 ){ return i;} // 0 and 1 do not play nice w log
