@@ -1,6 +1,4 @@
 function setElt(s, n, denom, card){
-    console.log(s)
-    console.log(arguments)
     return s[Math.floor(n/denom) % card];
 }
 
@@ -11,8 +9,7 @@ function cartesianN(sets, n){
     var cards = sets.map(function(s){return s.length;});
     var cartesianN = [];
     var denom = 1;
-    for(var iSet=nSets; iSet>-1; iSet--){
-        console.log(iSet)
+    for(var iSet=nSets-1; iSet>-1; iSet--){
         var s = sets[iSet];
         var card = cards[iSet];
         var elt = setElt(s, n, denom, card);
