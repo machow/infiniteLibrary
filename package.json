@@ -20,6 +20,7 @@
   "homepage": "https://github.com/jonberliner/infiniteLibrary#readme",
   "devDependencies": {
     "babelify": "^6.4.0",
+    "jasmine": "^2.3.2",
     "watchify": "^3.5.0"
   }
 }
