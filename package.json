@@ -1,0 +1,34 @@
+{
+  "name": "infinite-library-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/app.js",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify . -t babelify --outfile bundle.js",
+    "watch": "watchify . -d --debug -t babelify -o bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "infinite-library": "jonberliner/infiniteLibrary#jsDev"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1"
+  }
+}
